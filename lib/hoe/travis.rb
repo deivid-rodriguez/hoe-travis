@@ -620,7 +620,7 @@ module Hoe::Package
     cmd += " #{null_dev}" unless Rake.application.options.trace
 
     puts cmd if Rake.application.options.trace
-    system cmd
+    abort unless system cmd
   end
 end
 
